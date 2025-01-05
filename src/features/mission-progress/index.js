@@ -1,15 +1,15 @@
-import { UserLevel } from './ui/user-level'
-import { UserExperience } from './ui/user-experience'
-import { UserActivity } from './ui/user-activity'
-import './mission-progress.css';
+import { UserLevel } from "./ui/user-level";
+import { UserExperience } from "./ui/user-experience";
+import { UserActivity } from "./ui/user-activity";
+import "./mission-progress.css";
 
-export const Progress = () => {
+export const Progress = ({ level, experience, answer, comment }) => {
   return (
     <div className="mission-progress">
-      <UserLevel />
-      <UserExperience />
-      <UserActivity label={"질문에 답한 수"} count={12}/>
-      <UserActivity label={"댓글 단 수"} count={34}/>
+      <UserLevel level={level} />
+      <UserExperience exp={Math.min(experience, 100)} />
+      <UserActivity label={"질문에 답한 수"} count={answer} />
+      <UserActivity label={"댓글 단 수"} count={comment} />
     </div>
   );
-}
+};
