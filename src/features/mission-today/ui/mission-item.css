@@ -1,0 +1,35 @@
+.missionItem {
+  width: 330px;
+  height: 240px;
+  background: #f7f7f8;
+  border-radius: 20px;
+  padding: 54px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.missionItem.completed {
+  background: #f0efff;
+}
+
+.missionExecuted {
+  font-size: 30px;
+  color: #9797a0;
+}
+
+.missionExecuted.completed {
+  color: #5f52ff;
+}
+
+.missionTitle {
+  margin: 10px 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.missionPoint {
+  font-size: 20px;
+  font-weight: 600;
+}

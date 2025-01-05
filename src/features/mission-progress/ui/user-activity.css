@@ -1,0 +1,15 @@
+.userActivity {
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 18px;
+  border: 1px solid #d5d5d9;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.userActivity .count {
+  color: #5f52ff;
+}
