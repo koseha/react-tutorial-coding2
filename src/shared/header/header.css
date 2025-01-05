@@ -10,16 +10,15 @@
   display: flex;
 }
 
-.nav-item {
-  list-style: none;
+.nav > a {
   margin-right: 46.67px;
-  opacity: .3;
+  opacity: 0.3;
 }
-.nav-item.active {
+.nav > a.active {
   opacity: 1;
 }
 
-.nav-item a {
+.nav > a {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -29,8 +28,8 @@
   color: #000;
 }
 
-.nav-item img {
-  width: 28px
+.nav > a > img {
+  width: 28px;
 }
 
 .user {
