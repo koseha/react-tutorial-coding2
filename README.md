@@ -1,6 +1,6 @@
 # 배포 링크
 
-[https://seha-coding2.netlify.app/](https://seha-coding2.netlify.app/mission)
+https://seha-coding2.netlify.app/
 
 # Getting Started with Create React App
 
