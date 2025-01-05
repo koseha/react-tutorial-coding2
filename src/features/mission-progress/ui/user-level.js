@@ -1,4 +1,4 @@
-import './user-level.css'
+import "./user-level.css";
 
 export const UserLevel = () => {
   return (
@@ -7,9 +7,9 @@ export const UserLevel = () => {
         <button className="btn">미션해라~</button>
       </div>
       <div className="userLevel-status">
-        <img src="/assets/level01.png"></img>
+        <img src="/assets/level01.png" alt=""></img>
         <span>Lv. 1 아기 코딩이 상태</span>
       </div>
     </div>
   );
-}
+};
