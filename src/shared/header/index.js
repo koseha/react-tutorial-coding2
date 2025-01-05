@@ -28,19 +28,19 @@ export const Header = () => {
     <div className="header">
       <nav className="nav">
         <NavLink to="/mission">
-          <img src={navItems[1].iconSrc}></img>
+          <img src={navItems[1].iconSrc} alt=""></img>
           {navItems[1].label}
         </NavLink>
         <NavLink to="/topic">
-          <img src={navItems[2].iconSrc}></img>
+          <img src={navItems[2].iconSrc} alt=""></img>
           {navItems[2].label}
         </NavLink>
         <NavLink to="/cozy">
-          <img src={navItems[3].iconSrc}></img>
+          <img src={navItems[3].iconSrc} alt=""></img>
           {navItems[3].label}
         </NavLink>
         <NavLink to="/study">
-          <img src={navItems[4].iconSrc}></img>
+          <img src={navItems[4].iconSrc} alt=""></img>
           {navItems[4].label}
         </NavLink>
       </nav>

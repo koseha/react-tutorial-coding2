@@ -3,7 +3,7 @@ import { MissionItem } from "./ui/mission-item";
 import { useState } from "react";
 
 export const Today = ({ updateCompletedMission }) => {
-  const [completions, setCompletion] = useState([true, false, false, true]);
+  const [completions, setCompletion] = useState([false, false, false, false]);
   const missions = [
     "출석체크 미션",
     "주제 답글 미션",
