@@ -1,26 +1,22 @@
-import './header.css';
-import {NavItem} from './ui/nav-item';
+import { NavLink } from "react-router-dom";
+import "./header.css";
 
 const navItems = {
-  "1" : {
-    iconSrc: '/assets/icons/nav01.png',
+  1: {
+    iconSrc: "/assets/icons/nav01.png",
     label: "오늘의 미션",
-    path: "",
   },
-  "2" : {
-    iconSrc: '/assets/icons/nav02.png',
+  2: {
+    iconSrc: "/assets/icons/nav02.png",
     label: "주제 던지기",
-    path: "",
   },
-  "3" : {
-    iconSrc: '/assets/icons/nav03.png',
+  3: {
+    iconSrc: "/assets/icons/nav03.png",
     label: "코지 바다",
-    path: "",
   },
-  "4" : {
-    iconSrc: '/assets/icons/nav04.png',
+  4: {
+    iconSrc: "/assets/icons/nav04.png",
     label: "개념 공부",
-    path: "",
   },
 };
 
@@ -30,12 +26,24 @@ const navItems = {
 export const Header = () => {
   return (
     <div className="header">
-      <ul className="nav">
-        <NavItem item={navItems[1]} active={'active'}/>
-        <NavItem item={navItems[2]} active={''}/>
-        <NavItem item={navItems[3]} active={''}/>
-        <NavItem item={navItems[4]} active={''}/>
-      </ul>
+      <nav className="nav">
+        <NavLink to="/mission">
+          <img src={navItems[1].iconSrc}></img>
+          {navItems[1].label}
+        </NavLink>
+        <NavLink to="/topic">
+          <img src={navItems[2].iconSrc}></img>
+          {navItems[2].label}
+        </NavLink>
+        <NavLink to="/cozy">
+          <img src={navItems[3].iconSrc}></img>
+          {navItems[3].label}
+        </NavLink>
+        <NavLink to="/study">
+          <img src={navItems[4].iconSrc}></img>
+          {navItems[4].label}
+        </NavLink>
+      </nav>
       <div className="user">
         <div className="user-name">
           <button>정한샘</button>
@@ -45,4 +53,4 @@ export const Header = () => {
       </div>
     </div>
   );
-}
+};
