@@ -11,10 +11,13 @@ const calculateExperience = (base, answer, comment) => {
 export const Mission = () => {
   const [answerCount, setAnswerCount] = useState(12);
   const [commentCount, setCommentCount] = useState(34);
-  // const answerCount = 12;
-  // const commentCount = 34;
   const [experience, setExperience] = useState(20);
   const [level, setLevel] = useState(0);
+
+  useEffect(() => {
+    setAnswerCount((prev) => prev + 1);
+    setCommentCount((prev) => prev + 1);
+  }, []);
 
   useEffect(() => {
     setExperience(calculateExperience(experience, answerCount, commentCount));
