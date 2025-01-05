@@ -1,0 +1,22 @@
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 0;
+}
+
+.footer > button {
+  border: none;
+  border-radius: 70px;
+  background: #f7f7f8;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.footer > button > a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: #82828D;
+}
