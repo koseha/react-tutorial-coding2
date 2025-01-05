@@ -2,7 +2,7 @@ import "./mission-today.css";
 import { MissionItem } from "./ui/mission-item";
 import { useState } from "react";
 
-export const Today = () => {
+export const Today = ({ updateCompletedMission }) => {
   const [completions, setCompletion] = useState([true, false, false, true]);
   const missions = [
     "출석체크 미션",
@@ -12,9 +12,11 @@ export const Today = () => {
   ];
 
   const handleToggle = (index) => {
-    const updatedCompletions = completions.map((task, i) =>
-      i === index ? !task : task
-    );
+    const updatedCompletions = completions.map((task, i) => {
+      task = i === index ? !task : task;
+      if (i === index) updateCompletedMission(task ? 10 : -10);
+      return task;
+    });
     setCompletion(updatedCompletions);
   };
 
