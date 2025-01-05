@@ -1,0 +1,7 @@
+.mission {
+  width: 1080px;
+  height: 606px;
+  margin: 60px 0;
+  display: flex;
+  justify-content: space-between;
+}

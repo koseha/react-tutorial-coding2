@@ -1,0 +1,14 @@
+.missionToday {
+  width: 680px;
+  height: 100%;
+}
+
+.missionToday > h3 {
+  margin-bottom: 40px;
+}
+
+.missionItems {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
