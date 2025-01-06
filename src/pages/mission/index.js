@@ -2,22 +2,35 @@ import { Progress } from "../../features/mission-progress";
 import { Today } from "../../features/mission-today";
 import "./mission.css";
 import { useEffect, useState } from "react";
-
-const calculateExperience = (base, answer, comment) => {
-  const tmp = base + (answer + comment) / 10;
-  return parseInt(tmp);
-};
+import { GetUserInfo } from "./api/get-user-info";
+import { NewMission } from "../../features/mission-new";
 
 export const Mission = () => {
-  const answerCount = 12;
-  const commentCount = 34;
-  const [experience, setExperience] = useState(
-    calculateExperience(0, answerCount, commentCount)
-  );
+  const [answerCount, setAnswerCount] = useState(0);
+  const [commentCount, setCommentCount] = useState(0);
+  const [experience, setExperience] = useState(0);
   const [level, setLevel] = useState(0);
+  const [showTodayMission, setShowTodayMission] = useState(true);
+
+  const getUserinfo = async () => {
+    const data = await GetUserInfo();
+    return data;
+  };
 
   useEffect(() => {
-    setLevel(parseInt(experience / 20));
+    const fetchUserInfo = async () => {
+      const data = await getUserinfo();
+      setAnswerCount(data.answerCount);
+      setCommentCount(data.commentCount);
+      setExperience(data.currentPoint);
+    };
+
+    fetchUserInfo();
+  }, []);
+
+  useEffect(() => {
+    const level = parseInt(experience / 20);
+    setLevel(level < 0 ? Math.max(level, 0) : Math.min(level, 5));
   }, [experience]);
 
   return (
@@ -28,9 +41,19 @@ export const Mission = () => {
         answer={answerCount}
         comment={commentCount}
       />
-      <Today
-        updateCompletedMission={(point) => setExperience(experience + point)}
-      />
+      <div>
+        {showTodayMission && (
+          <Today
+            updateCompletedMission={(point) =>
+              setExperience(experience + point)
+            }
+            showNewMissionView={() => setShowTodayMission(false)}
+          />
+        )}
+        {!showTodayMission && (
+          <NewMission showTodayMissionView={() => setShowTodayMission(true)} />
+        )}
+      </div>
     </div>
   );
 };

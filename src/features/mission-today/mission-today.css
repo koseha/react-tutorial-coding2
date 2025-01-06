@@ -1,14 +1,58 @@
 .missionToday {
   width: 680px;
   height: 100%;
+  position: relative;
 }
 
-.missionToday > h3 {
+.missionToday-header {
   margin-bottom: 40px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.missionToday-header > h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.missionToday-header > button {
+  padding: 8px 16px;
+  background: #ffa300;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
 }
 
 .missionItems {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+}
+
+.missionPages {
+  display: flex;
+  justify-content: center;
+  /* margin-top: 31px; */
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.missionPages > button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: #8c8c8c;
+}
+.missionPages > button.active {
+  background: #f0efff;
 }
