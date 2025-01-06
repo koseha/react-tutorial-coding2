@@ -1,10 +1,10 @@
 {
-  "settings": {
-    "import/resolver": {
-      "alias": {
-        "map": [["@", "./src"]],
-        "extensions": [".js", ".jsx"]
-      }
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@features/*": ["features/*"],
+      "@shared/*": ["shared/*"],
+      "@pages/*": ["pages/*"]
     }
   }
 }
