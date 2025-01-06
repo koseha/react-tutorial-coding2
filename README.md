@@ -1,6 +1,49 @@
-# 배포 링크
+# React Tutorial Coding2
+
+## 배포 링크
 
 https://seha-coding2.netlify.app/
+
+## Architecture
+
+### 25/01/06 | step 1, 2
+
+```css
+src/
+├── index.js
+├── index.css
+├── App.js
+├── App.css
+├── pages/
+│   ├── index.js
+│   └── mission/
+│       ├── index.js
+│       └── header.css
+├── features/
+│   ├── mission-progress/
+│   │   ├── ui/
+│   │   │   ├── user-activity.js
+│   │   │   ├── user-activity.css
+│   │   │   ├── user-experience.js
+│   │   │   ├── user-experience.css
+│   │   │   ├── user-level.js
+│   │   │   └── user-level.css
+│   │   ├── index.js
+│   │   └── mission-progress.css
+│   └── mission-today/
+│       ├── ui/
+│       │   ├── mission-item.js
+│       │   ├── mission-item.css
+│       ├── index.js
+│       └── mission-today.css
+└── shared/
+    ├── header/
+    │   ├── index.js
+    │   └── header.css
+    └── footer/
+        ├── index.js
+        └── footer.css
+```
 
 # Getting Started with Create React App
 
